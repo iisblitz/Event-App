@@ -3,16 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    remotePatterns:[
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: "",
-        pathname: ''
-      }
-    ]
-
-  },
+    domains:['images.unsplash.com','wembleypark.com']
+  }
 }
 
 module.exports = nextConfig

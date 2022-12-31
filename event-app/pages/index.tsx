@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,17 +18,18 @@ export default function Home({data}) {
       <header>
         <nav>
           <img src="" alt="" />
-          <a href="/"><img src="" alt="" /><h2>Home</h2></a>
-          <a href="/events"><img src="" alt="" /> <h2>Events</h2></a>
-          <a href="/about-us"><img src="" alt="" /><h2> About-Us</h2></a>
+          <Link href="/"><img src="" alt=""/><h2>Home</h2></Link>
+          <Link href="/events"><img src="" alt=""/><h2>Events</h2></Link>
+          <Link href="/about-us"><img src="" alt=""/><h2> About-Us</h2></Link>
+          
         </nav>
       </header>
       
       <main className={styles.main}>
         {data.map((ev: {id:string; title:string; image:string;description:string;}) => (
-        <a key={ev.id} href={`/events/${ev.id}`}>
+        <Link key={ev.id} href={`/events/${ev.id}`}>
           <Image width={200} height={200} alt={ev.title} src={ev.image} /><h2>{ev.title}</h2>
-          <p>{ev.description}</p></a>))}
+          <p>{ev.description}</p></Link>))}
 
         </main>
 
@@ -45,7 +47,6 @@ const {events_categories} = await import ('../Data/data.json')
   return {
       props:{
           data: events_categories
-
       }
   }
 }
