@@ -1,0 +1,58 @@
+header
+  height: 300px
+  width: 100%
+  max-width: 1250px
+  margin: auto
+  background-color: #ccc
+
+  >div
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  h1
+    width: 60%
+    font-size: 40px
+    text-transform: uppercase
+  .topNav
+    display: flex
+    justify-content: space-between
+    align-content: center
+    ul
+      display: flex
+      text-decoration: none
+      list-style: none
+      gap: 10px
+    li
+      font-weight: 600
+      font-size: 16px
+
+footer
+  background-color: #333
+  color: #fff
+  padding: 10px
+  text-align: center
+
+main
+  width: 100%
+  max-width: 1450px
+  margin: auto
+  padding: 100px 30px
+  text-decoration: none
+  min-height: 500px
+.home_body
+  display: flex
+  flex-direction: column
+  gap: 50px
+  .image
+    width: 40%
+  .card
+    display: flex
+    flex-direction: row
+    gap: 30px
+    justify-content: center
+    align-content: center
+    align-items: center
+    &:nth-child(even)
+      direction: rtl
+    .content
+      width: 50%
