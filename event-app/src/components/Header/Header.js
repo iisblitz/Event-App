@@ -5,22 +5,33 @@ import Image from 'next/image'
 const Header = () => {
     return (
         
-            <header>
-                <div className='topNav'>
-                    <Image src={logo} width={50} height={50} alt="logo" />
-                    <nav>
-                    <ul>
-                    <li><Link href="/"><img src="" alt=""/><h2>Home</h2></Link></li>
-                    <li><Link href="/events"><img src="" alt=""/><h2>Events</h2></Link></li>
-                    <li><Link href="/about-us"><img src="" alt=""/><h2> About-Us</h2></Link></li>
-                    </ul>
-                    
-                    
-                    
-                    </nav>
-                </div>
-                <h1>Lorem Ipsum</h1>
-            </header>
+      <header>
+      <div>
+        <div className="topNav">
+          <Image alt="logo" src={logo} width={50} height={50} />
+          <nav>
+            <ul>
+              <li>
+                <Link href="/" passHref>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/events" passHref>
+                   Events
+                </Link>
+              </li>
+              <li>
+                <Link href="/about-us" passHref>
+                   About us
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <p className="title"> Sed ut perspiciatis unde omnis</p>
+      </div>
+    </header>
      
       );
 }
