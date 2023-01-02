@@ -5,7 +5,7 @@ const EventPage = ({ data }) => <SingleEvent data={data} />;
 export default EventPage;
 
 export async function getStaticPaths() {
-  const data = await import('/data/data.json');
+  const data = await import('/Data/data.json');
   const allEvents = data.allEvents;
 
   const allPaths = allEvents.map((path) => {
